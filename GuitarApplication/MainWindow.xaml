@@ -5,40 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuitarApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="800">
+        Title="MainWindow" Height="350" Width="860"
+        Background="Black"
+        >
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary 
+                  Source="Resources.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <StackPanel Orientation="Vertical">
+        
         <StackPanel Height="50" Orientation="Horizontal" HorizontalAlignment="Center" Margin="15">
             <Button x:Name="btnRandomize" Width="100" Margin="2" Content="Losuj" Click="btnRandomize_Click" />
             <Button x:Name="btnPlay" Width="100" Margin="2" Content="Odtwórz" Click="btnPlay_Click" />
         </StackPanel>
-        <Grid x:Name="GridFretoboard" Width="783" Height="120" Cursor="Hand">
-            <Grid.Background>
-                <ImageBrush ImageSource="/Data/fretboard.jpg"/>
-            </Grid.Background>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.023017903*" />
-                <ColumnDefinition Width="9.846547315*" />
-                <ColumnDefinition Width="9.335038363*" />
-                <ColumnDefinition Width="9.079283887*" />
-                <ColumnDefinition Width="8.823529412*" />
-                <ColumnDefinition Width="8.567774936*" />
-                <ColumnDefinition Width="8.31202046*" />
-                <ColumnDefinition Width="8.056265985*" />
-                <ColumnDefinition Width="7.800511509*" />
-                <ColumnDefinition Width="7.544757033*" />
-                <ColumnDefinition Width="7.289002558*" />
-                <ColumnDefinition Width="7.033248082*" />
-                <ColumnDefinition Width="7.289002558*" />
-            </Grid.ColumnDefinitions>
-        </Grid>
+
+        <StackPanel Orientation="Horizontal" Height="120" Width="842" Cursor="Hand">
+            <Grid Width="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                
+                <Ellipse Height="12" Width="12" Fill="LightGray" />
+                <Ellipse Height="12" Width="12" Fill="LightGray" Grid.Row="1" />
+                <Ellipse Height="12" Width="12" Fill="LightGray" Grid.Row="2" />
+                <Ellipse Height="12" Width="12" Fill="LightGray" Grid.Row="3" />
+                <Ellipse Height="12" Width="12" Fill="LightGray" Grid.Row="4" />
+                <Ellipse Height="12" Width="12" Fill="LightGray" Grid.Row="5" />
+            </Grid>
+            <Grid x:Name="GridFretoboard" Width="813">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Data/fretboard.jpg"/>
+                </Grid.Background>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.023017903*" />
+                    <ColumnDefinition Width="9.846547315*" />
+                    <ColumnDefinition Width="9.335038363*" />
+                    <ColumnDefinition Width="9.079283887*" />
+                    <ColumnDefinition Width="8.823529412*" />
+                    <ColumnDefinition Width="8.567774936*" />
+                    <ColumnDefinition Width="8.31202046*" />
+                    <ColumnDefinition Width="8.056265985*" />
+                    <ColumnDefinition Width="7.800511509*" />
+                    <ColumnDefinition Width="7.544757033*" />
+                    <ColumnDefinition Width="7.289002558*" />
+                    <ColumnDefinition Width="7.033248082*" />
+                    <ColumnDefinition Width="7.289002558*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </StackPanel>
+        
         <Label Width="300" Height="100" Margin="10" HorizontalAlignment="Center" FontSize="64" FontStretch="SemiExpanded">
             DOBRZE
         </Label>

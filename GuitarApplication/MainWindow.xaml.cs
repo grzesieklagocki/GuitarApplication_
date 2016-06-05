@@ -13,21 +13,11 @@ namespace GuitarApplication
     /// </summary>
     public partial class MainWindow : Window
     {
-        private DoubleAnimation animation;
-
         public MainWindow()
         {
-            animation = new DoubleAnimation
-            {
-                To = 0,
-                BeginTime = TimeSpan.FromSeconds(0),
-                Duration = TimeSpan.FromSeconds(3),
-                FillBehavior = FillBehavior.HoldEnd
-            };
-
             InitializeComponent();
 
-            InitFretLabels(true);
+            InitFretLabels();
 
             Sound.Randomize();
         }
@@ -38,26 +28,12 @@ namespace GuitarApplication
             if (sender != null)
             {
                 var label = sender as Label;
+                var cell = GetColumnAndRow(label);
+                var checkSound = !btnRandomize.IsEnabled;
+                var isCorrectSound = Sound.IsCorrectSound(5 - cell.row, cell.column);
 
-                int row = (int)label.GetValue(Grid.RowProperty);
-                int column = (int)label.GetValue(Grid.ColumnProperty);
-
-                Sounds.Sound.Play(5 - row, column);
-                
-                if (!btnRandomize.IsEnabled)
-                {
-                    if (Sounds.Sound.IsCorrectSound(5 - row, column))
-                        label.SetValue(Label.BackgroundProperty, GetGradient(Colors.Green));
-                    else
-                        label.SetValue(Label.BackgroundProperty, GetGradient(Colors.Red));
-                }
-                else
-                    label.SetValue(Label.BackgroundProperty, GetGradient(Colors.White));
-
-                label.BeginAnimation(UIElement.OpacityProperty, null);
-                label.Opacity = 0.5;
-
-                label.BeginAnimation(UIElement.OpacityProperty, animation);
+                Sound.Play(5 - cell.row, cell.column);
+                Animation.FlashPickedFret(label, FretColor(checkSound, isCorrectSound));
 
                 btnRandomize.IsEnabled = true;
             }
