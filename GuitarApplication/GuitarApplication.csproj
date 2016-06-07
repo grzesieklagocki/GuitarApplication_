@@ -154,148 +154,147 @@
     <Content Include="Data\fretboard.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\0.mp3">
+    <Content Include="Data\Sounds\Overdrive\0.mp3" />
+    <Content Include="Data\Sounds\Overdrive\10.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\1.mp3">
+    <Content Include="Data\Sounds\Overdrive\11.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\10.mp3">
+    <Content Include="Data\Sounds\Overdrive\12.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\11.mp3">
+    <Content Include="Data\Sounds\Overdrive\13.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\12.mp3">
+    <Content Include="Data\Sounds\Overdrive\14.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\13.mp3">
+    <Content Include="Data\Sounds\Overdrive\15.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\14.mp3">
+    <Content Include="Data\Sounds\Overdrive\16.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\15.mp3">
+    <Content Include="Data\Sounds\Overdrive\17.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\16.mp3">
+    <Content Include="Data\Sounds\Overdrive\18.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\17.mp3">
+    <Content Include="Data\Sounds\Overdrive\19.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\18.mp3">
+    <Content Include="Data\Sounds\Overdrive\1.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\19.mp3">
+    <Content Include="Data\Sounds\Overdrive\2.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\2.mp3">
+    <Content Include="Data\Sounds\Overdrive\20.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\20.mp3">
+    <Content Include="Data\Sounds\Overdrive\21.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\21.mp3">
+    <Content Include="Data\Sounds\Overdrive\22.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\22.mp3">
+    <Content Include="Data\Sounds\Overdrive\23.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\23.mp3">
+    <Content Include="Data\Sounds\Overdrive\24.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\24.mp3">
+    <Content Include="Data\Sounds\Overdrive\25.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\25.mp3">
+    <Content Include="Data\Sounds\Overdrive\26.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\26.mp3">
+    <Content Include="Data\Sounds\Overdrive\27.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\27.mp3">
+    <Content Include="Data\Sounds\Overdrive\28.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\28.mp3">
+    <Content Include="Data\Sounds\Overdrive\29.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\29.mp3">
+    <Content Include="Data\Sounds\Overdrive\3.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\3.mp3">
+    <Content Include="Data\Sounds\Overdrive\30.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\30.mp3">
+    <Content Include="Data\Sounds\Overdrive\31.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\31.mp3">
+    <Content Include="Data\Sounds\Overdrive\32.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\32.mp3">
+    <Content Include="Data\Sounds\Overdrive\33.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\33.mp3">
+    <Content Include="Data\Sounds\Overdrive\34.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\34.mp3">
+    <Content Include="Data\Sounds\Overdrive\35.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\35.mp3">
+    <Content Include="Data\Sounds\Overdrive\36.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\36.mp3">
+    <Content Include="Data\Sounds\Overdrive\37.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\37.mp3">
+    <Content Include="Data\Sounds\Overdrive\38.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\38.mp3">
+    <Content Include="Data\Sounds\Overdrive\39.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\39.mp3">
+    <Content Include="Data\Sounds\Overdrive\4.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\4.mp3">
+    <Content Include="Data\Sounds\Overdrive\40.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\40.mp3">
+    <Content Include="Data\Sounds\Overdrive\41.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\41.mp3">
+    <Content Include="Data\Sounds\Overdrive\42.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\42.mp3">
+    <Content Include="Data\Sounds\Overdrive\43.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\43.mp3">
+    <Content Include="Data\Sounds\Overdrive\44.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\44.mp3">
+    <Content Include="Data\Sounds\Overdrive\45.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\45.mp3">
+    <Content Include="Data\Sounds\Overdrive\46.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\46.mp3">
+    <Content Include="Data\Sounds\Overdrive\5.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\5.mp3">
+    <Content Include="Data\Sounds\Overdrive\6.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\6.mp3">
+    <Content Include="Data\Sounds\Overdrive\7.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\7.mp3">
+    <Content Include="Data\Sounds\Overdrive\8.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Sounds\8.mp3">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Data\Sounds\9.mp3">
+    <Content Include="Data\Sounds\Overdrive\9.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

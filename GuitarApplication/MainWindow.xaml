@@ -27,7 +27,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Height="120" Width="842" Cursor="Hand">
-            <Grid Width="20">
+            <Grid x:Name="GridFretoboardEmptyStrings" Width="20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />

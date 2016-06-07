@@ -24,6 +24,7 @@ namespace GuitarApplication
 
         private static class Animation
         {
+            public static double startOpacity = 0.55;
             private static DoubleAnimation animation =
                             new DoubleAnimation
                             {
@@ -33,7 +34,7 @@ namespace GuitarApplication
                                 FillBehavior = FillBehavior.HoldEnd
                             };
 
-            public static void FlashPickedFret(Label label, Color color, bool entireString = true, double startOpacity = 0.55)
+            public static void FlashPickedFret(Label label, Color color, bool entireString = true)
             {
                 if (entireString)
                 {
@@ -50,11 +51,14 @@ namespace GuitarApplication
                 }
                 else
                 {
-                    label.BeginAnimation(OpacityProperty, null);
-                    label.Opacity = startOpacity;
-                    label.BeginAnimation(UIElement.OpacityProperty, animation);
+                    label.Background.BeginAnimation(OpacityProperty, null);
+                    label.Background.Opacity = startOpacity;
+                    label.Background.BeginAnimation(UIElement.OpacityProperty, animation);
                 }
             }
+
+            public static void SetAnimationTime(double seconds)
+            { animation.Duration = TimeSpan.FromSeconds(seconds); }
         }
 
         private void InitFretLabels(bool hintEnable = true)
@@ -69,11 +73,11 @@ namespace GuitarApplication
                     label.SetValue(Label.ForegroundProperty, Brushes.White);
 
                     if (hintEnable)
-                        label.SetValue(Label.ContentProperty, Sound.GetSoundName(y, x));
+                        label.SetValue(Label.ContentProperty, sound.GetSoundName(y, x));
 
                     label.SetValue(Label.MarginProperty, new Thickness(1));
                     label.SetValue(Label.BackgroundProperty, GetGradient(Colors.White));
-                    label.SetValue(Label.OpacityProperty, 0.0);
+                    label.Background.SetValue(Label.OpacityProperty, 0.0);
 
                     label.MouseDown += new MouseButtonEventHandler(Cell_MouseDown);
 
@@ -84,19 +88,20 @@ namespace GuitarApplication
             {
                 var label = new Label();
 
+                //label.SetValue(Grid.ColumnProperty, 0);
                 label.SetValue(Grid.RowProperty, y);
                 label.SetValue(Label.ForegroundProperty, Brushes.White);
 
-                if (hintEnable)
-                    label.SetValue(Label.ContentProperty, Sound.GetSoundName(y, 0));
+                //if (hintEnable)
+                //    label.SetValue(Label.ContentProperty, Sound.GetSoundName(y, 0));
 
-                label.SetValue(Label.MarginProperty, new Thickness(1));
-                label.SetValue(Label.BackgroundProperty, GetGradient(Colors.White));
+                //label.SetValue(Label.MarginProperty, new Thickness(1));
+                //label.SetValue(Label.BackgroundProperty, GetGradient(Colors.White));
                 label.SetValue(Label.OpacityProperty, 0.0);
 
                 label.MouseDown += new MouseButtonEventHandler(Cell_MouseDown);
 
-                GridFretoboard.Children.Add(label);
+                GridFretoboardEmptyStrings.Children.Add(label);
             }
         }
 
@@ -122,12 +127,6 @@ namespace GuitarApplication
             gradient.GradientStops.Add(stop);
 
             return gradient;
-        }
-
-        private void RandomizeSound()
-        {
-            Sound.Randomize();
-            Sound.Play();
         }
 
         private Color FretColor(bool checkSound, bool isCorrectSound)

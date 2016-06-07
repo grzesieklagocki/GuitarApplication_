@@ -13,13 +13,13 @@ namespace GuitarApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Sound sound = new Sound("Overdrive");
+
         public MainWindow()
         {
             InitializeComponent();
 
             InitFretLabels();
-
-            Sound.Randomize();
         }
 
         private void Cell_MouseDown(object sender, MouseButtonEventArgs e)
@@ -30,9 +30,9 @@ namespace GuitarApplication
                 var label = sender as Label;
                 var cell = GetColumnAndRow(label);
                 var checkSound = !btnRandomize.IsEnabled;
-                var isCorrectSound = Sound.IsCorrectSound(5 - cell.row, cell.column);
+                var isCorrectSound = sound.IsCorrectSound(5 - cell.row, cell.column);
 
-                Sound.Play(5 - cell.row, cell.column);
+                sound.Play(5 - cell.row, cell.column);
                 Animation.FlashPickedFret(label, FretColor(checkSound, isCorrectSound));
 
                 btnRandomize.IsEnabled = true;
@@ -42,12 +42,12 @@ namespace GuitarApplication
         private void btnRandomize_Click(object sender, RoutedEventArgs e)
         {
             (sender as Button).IsEnabled = false;
-            RandomizeSound();
+            sound.Play();
         }
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            Sound.Play();
+            sound.Play();
         }
     }
 }

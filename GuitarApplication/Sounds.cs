@@ -1,43 +1,72 @@
 ﻿using NAudio.Wave;
 using System;
+using System.Collections.Generic;
+using System.Windows;
 
 namespace Sounds
 {
-    static class Sound
+    class Sound
     {
-        private static IWavePlayer waveOutDevice = new WaveOut();
-        private static AudioFileReader audioFileReader;
-        private static int currentSound;
+        private int currentSound;
+        private AudioFileReader[] singleNoteSounds;
+        private WaveOut waveOut = new WaveOut();
+        const int notesCount = 46;
 
-        public static void Randomize()
+        public Sound(string directory)
         {
-            Random random = new Random();
-            currentSound = random.Next(46);
+            singleNoteSounds = new AudioFileReader[notesCount];
+
+            for (int i = 0; i < notesCount; i++)
+                singleNoteSounds[i] = new AudioFileReader(("Data/Sounds/" + directory + "/" + i.ToString() + ".mp3"));
         }
 
-        public static bool IsCorrectSound(int _string, int fret)
+        private int Randomize()
         {
-            return (currentSound == CalculateSound(_string, fret));
+            var random = new Random();
+
+            return random.Next(notesCount + 1);
         }
 
-        public static void Play()
+        private void PlaybackStopped(object sender, StoppedEventArgs e)
         {
-            Play(currentSound);
+            (sender as WaveOut).Dispose();
         }
 
-        public static void Play(int _string, int fret)
+        /// <summary>
+        /// Play random note
+        /// </summary>
+        public void Play()
+        { Play(currentSound = Randomize()); }
+
+        public void Play(int _string, int fret)
+        { Play(CalculateSound(_string, fret)); }
+
+        private void Play(int soundNumber)
         {
-            Play(CalculateSound(_string, fret));
+            var waveOutDevice = new WaveOut();
+
+            try
+            {
+                //waveOut.Stop();
+                //waveOut.Dispose();
+
+                var waveOut = new WaveOut();
+                //waveOut.PlaybackStopped += PlaybackStopped;
+
+                waveOut.Init(singleNoteSounds[soundNumber]);
+                waveOut.Play();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
         }
 
-        private static void Play(int soundNumber)
-        {
-            audioFileReader = new AudioFileReader("Data/Sounds/" + soundNumber.ToString() + ".mp3");
-            waveOutDevice.Init(audioFileReader);
-            waveOutDevice.Play();
-        }
+        public bool IsCorrectSound(int _string, int fret)
+        { return (currentSound == CalculateSound(_string, fret)); }
 
-        public static string GetSoundName(int _string, int fret)
+        public string GetSoundName(int _string, int fret)
         {
             int soundNumber = CalculateSound(_string, fret);
             string soundName = string.Empty;
@@ -85,10 +114,11 @@ namespace Sounds
             return soundName;
         }
 
-        private static int CalculateSound(int _string, int fret)
+        private int CalculateSound(int _string, int fret)
         {
             if (_string < 0 || _string > 5 || fret < 0 || fret > 12)
                 throw new ArgumentOutOfRangeException();
+
 
             int soundNumber = _string * 5 + fret;
 
@@ -96,6 +126,22 @@ namespace Sounds
                 soundNumber--;
 
             return soundNumber;
+        }
+
+
+        private class SingleNoteSound
+        {
+            private WaveOut waveOutDevice = new WaveOut();
+            private AudioFileReader audioFileReader;
+
+            public SingleNoteSound(int soundNumber, string directory)
+            {
+                audioFileReader = new AudioFileReader("Data/Sounds/" + directory + "/" + soundNumber.ToString() + ".mp3");
+                waveOutDevice.Init(audioFileReader);
+            }
+
+            public void Play()
+            { waveOutDevice.Play(); }
         }
     }
 }
